@@ -1,0 +1,78 @@
+/* CSS Document */
+/* for tabs*/
+body {
+  margin: 0;
+}
+
+/* 头部样式 */
+.header {
+  background-image: linear-gradient(to top, #7A88FF, #7AFFAF);
+  padding: 100px;
+  text-align:center ;
+  background-attachment:fixed
+}
+.header whitetext {
+
+ 
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: blink;
+	font-size: 
+	}
+/* 导航条 */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+ 
+/* 导航链接 */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+	.topnav right{
+		text-align: center;
+		color : #ddd;
+		display: block;
+		text-decoration: none;
+		padding: 14px 16px;
+		color: #f2f2f2;
+		float: right;
+	}
+	.topnav right:hover{
+		background-color : #ddd;
+		color :black;
+	}
+ 
+/* 链接 - 修改颜色 */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.mainbody {
+background-color:#cff7e8
+}
+.bottom {
+background-color:#FFFFFF
+text-align: center;
+}
+.go-top{
+position:fixed;
+bottom: 20px;		
+
+}
+.go-top a {
+    display: block;			/* 将<a>标签设为块元素，用于美化样式 */
+    text-decoration: none;		/* 取消超链接下画线 */
+    color: #333;			/* 设置文本颜色 */
+    background-color: #f2f2f2;		/* 设置背景颜色 */
+    border: 1px solid #ccc;		/* 设置边框样式 */
+    padding: 10px 20px;			/* 设置内边距 */
+    border-radius: 5px;			/* 设置圆角矩形 */
+    letter-spacing: 2px;		/* 设置文字间距 */
+  }
