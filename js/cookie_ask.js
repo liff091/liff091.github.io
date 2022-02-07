@@ -15,7 +15,7 @@ window.onload = function(){
 			window.close();
 	}	
 	}else{
-		Cookies.set('cookies_ask', 'true');
+		Cookies.set('cookies_ask', 'true', { expires: 7 });
 	}
 	}
 }
