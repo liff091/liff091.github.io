@@ -1,0 +1,14 @@
+$(document).ready(function(){
+$("#gameBtn").click(function(){
+    $("#gamePanel").slideToggle("slow");
+  });
+$("#videoBtn").click(function(){
+    $("#videoPanel").slideToggle("slow");
+  });
+$("#shopBtn").click(function(){
+    $("#shopPanel").slideToggle("slow");
+  });
+$("#diskBtn").click(function(){
+    $("#diskPanel").slideToggle("slow");
+  });
+});

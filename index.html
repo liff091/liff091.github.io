@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页-实时疫情数据网</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">
+<!--
+body,td,th {
+	color: #000000;
+}
+.tabManual {color: #ffe67f; font-size: 200%; }
+.tabSlide {color: #d0000F; font-size: 200%;}
+.topic {color: #d0000F; font-size: 300%;}
+.progress{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 20px;
+		width: 100%;
+        background: #f5f5f5;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .progress-inner{
+    	width: 1%;
+        background: #abcdef;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
+.STYLE2 {font-size: 50%}
+.STYLE3 {
+	font-size: 36px;
+	color: #ffe67f;
+}
+-->
+</style></head>
+
+<body>
+<script type="text/javascript" src="./js/plugins/lib/jquery.3.6.0.js"></script>
+<script type="text/javascript" src="./js/plugins/tab.all.jQuery.js"></script>
+<script type="text/javascript" src="./js/plugins/loadChecker.all.jQuery.js"></script>
+<script type="text/javascript" src="./js/plugins/loading.all.jQuery.js"></script>
+
+
+<div class="progress" id="progressBar" >
+    <div class="progress-inner" id="progress"></div>
+</div>
+<h1 class = "topic">&nbsp;首页 <span class="STYLE2">实时疫情数据网</span></h1>
+<table width="100%"  border="0"  bgcolor="#d0000F">
+  <tr>
+    <th width="20%" height="100%" align="center" bgcolor="#d0000F" id="HomeBtn" scope="col" class="tabManual">首页</th>
+    <th width="20%" height="100%" align="center" bgcolor="#d0000F" id="AboutBtn" scope="col" class="tabManual">关于</th>
+    <th scope="col">&nbsp;</th>
+    <th width="30%" height="100%" align="center" bgcolor="#d0000F" id="JumpBtn" scope="col" class="tabManual">传送门（友情链接）</th>
+  </tr>
+</table>
+
+<table width="100%"  border="0">
+  <tr>
+    <td height="200" colspan="3">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="40%">&nbsp;</td>
+    <td width="20%" height="103" bgcolor="#d0000F"><div id="EnterBtn" >
+      <div align="center" class="STYLE3">点击进入查看页面</div>
+    </div></td>
+    <td width="40%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="30%" colspan="3">&nbsp;</td>
+  </tr>
+</table>
+
+<div fullload="0" id="loadCheckerDiv"></div>
+	
+
+	
+
+	
+<p>&nbsp;</p>
+</body>
+</html>

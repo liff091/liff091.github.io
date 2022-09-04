@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>传送门-实时疫情数据网</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">
+<!--
+body,td,th {
+	color: #000000;
+}
+.tabManual {color: #ffe67f; font-size: 200%; }
+.tabSlide {color: #d0000F; font-size: 200%;}
+.topic {color: #d0000F; font-size: 300%;}
+.progress{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 20px;
+		width: 100%;
+        background: #f5f5f5;
+        border-bottom: 1px solid #ddd;
+		
+    }
+
+    .progress-inner{
+    	width: 1%;
+        background: #abcdef;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
+.STYLE2 {font-size: 50%}
+.STYLE4 {font-size: 24px}
+.flip
+{
+margin:0px;
+padding:5px;
+text-align:center;
+background:#D3D3D3;
+border-radius: 15px;
+border-style: outset;
+}
+.panel{
+margin:0px;
+padding:5px;
+text-align:left;
+background:#D3D3D3;
+border-radius: 15px;
+border-style: outset;
+}
+.panel
+{
+
+display:none;
+text-align:left;
+}
+-->
+</style></head>
+
+<body>
+<script type="text/javascript" src="./js/plugins/lib/jquery.3.6.0.js"></script>
+<script type="text/javascript" src="./js/plugins/tab.all.jQuery.js"></script>
+<script type="text/javascript" src="./js/plugins/loadChecker.all.jQuery.js"></script>
+<script type="text/javascript" src="./js/plugins/loading.all.jQuery.js"></script>
+<script type="text/javascript" src="./js/plugins/slideBar.jump.jQuery.js"></script>
+<script type="text/javascript" src="./js/plugins/jumplink.jump.jQuery.js"></script>
+<!--<script type="text/javascript" src="./js/plugins/background.all.jQuery.js"></script> 被废弃，详见相关js文件-->
+
+
+<div class="progress" id="progressBar" >
+    <div class="progress-inner" id="progress"></div>
+</div>
+<h1 class = "topic">&nbsp;传送门 <span class="STYLE2">实时疫情数据网</span></h1>
+<table width="100%"  border="0"  bgcolor="#d0000F">
+  <tr>
+    <th width="20%" height="100%" align="center" bgcolor="#d0000F" id="HomeBtn" scope="col" class="tabManual">首页</th>
+    <th width="20%" height="100%" align="center" bgcolor="#d0000F" id="AboutBtn" scope="col" class="tabManual">关于</th>
+    <th scope="col">&nbsp;</th>
+    <th width="30%" height="100%" align="center" bgcolor="#d0000F" id="JumpBtn" scope="col" class="tabManual">传送门（友情链接）</th>
+  </tr>
+</table>
+
+
+<div fullload="0" id="loadCheckerDiv"></div>
+	
+
+	
+
+	
+<p class="STYLE4">传送门可以帮你更快地前往某个网站并防止被潜在的欺诈广告袭扰</p>
+<div id="gameBtn" class="flip">游戏类网站 点击展开或收起</div>
+<div id="gamePanel"class="panel">
+<li hyperlink="https://store.steampowered.com"><img src="img/steamicon.ico" width="20" height="20">Steam-高质量游戏平台(需要加速器）</li>
+<li hyperlink="https://www.steamcommunity.com"><img src="img/steamicon.ico" width="20" height="20">Steam 社区(需要加速器）</li>
+<li hyperlink="https://www.epicgames.com"><img src="img/epicicon.ico" width="20" height="20">Epic游戏商城 | 下载畅玩 PC 平台游戏、模组、DLC 和更多</li>
+<li hyperlink="https://www.gog.com" ><img src="img/gogicon.png" width="20" height="20">GOG 最佳游戏, DRM-free</li>
+<li hyperlink="https://www.gogalaxy.com/"><img src="img/gogalaxyicon.png" width="20" height="20">GOG GALAXY 2.0——一站连通你的所有游戏和朋友</li>
+<li hyperlink="https://www.ubisoft.com"><img src="img/ubisofticon.png" width="20" height="20">育碧游戏–育碧在线服务–育碧官方网站</li>
+<li hyperlink="https://www.origin.com/hkg/zh-tw/store"><img src="img/origincion.webp" width="20" height="20">Origin | 充滿超棒PC遊戲匯集的平台 | Origin</li>
+<li hyperlink="https://www.rockstargames.com"><img src="img/rockstaricon.png" width="20" height="20">Rockstar Games</li>
+</div>
+<div id="videoBtn" class="flip">视频类网站 点击展开或收起</div>
+<div id="videoPanel"class="panel">
+<li hyperlink="https://www.bilibili.com"><img src="img/bilibiliicon.ico" width="20" height="20">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</li>
+<li hyperlink="https://www.acfun.cn"><img src="img/acfunicon.ico" width="20" height="20">AcFun弹幕视频网 - 认真你就输啦 (・ω・)ノ- ( ゜- ゜)つロ</li>
+<li hyperlink="https://www.youku.com"><img src="img/youkuicon.png" width="20" height="20">优酷 - 你的热爱 正在热播</li>
+<li hyperlink="https://www.iqiyi.com" ><img src="img/iqiyiicon.png" width="20" height="20">爱奇艺-在线视频网站-海量正版高清视频在线观看</li>
+<li hyperlink="https://v.qq.com/"><img src="img/tengxunshipinicon.jpg" width="20" height="20">腾讯视频 - 中国领先的在线视频媒体平台,海量高清视频在线观看</li>
+<li hyperlink="https://haikan.baidu.com"><img src="img/haokanshipinicon.ico" width="20" height="20">好看视频--轻松有收获</li>
+</div>
+<div id="shopBtn" class="flip">电商类网站 点击展开或收起</div>
+<div id="shopPanel"class="panel">
+<li hyperlink="https://www.taobao.com"><img src="img/taobaoicon.png" width="20" height="20">淘宝网 - 淘！我喜欢</li>
+<li hyperlink="https://www.jd.com"><img src="img/jdicon.ico" width="20" height="20">京东(JD.COM)-正品低价、品质保障、配送及时、轻松购物！</li>
+<li hyperlink="https://www.amazon.cn"><img src="img/yamaxunicon.png" width="20" height="20">亚马逊-网上购物商城：要网购, 就来Z.cn!</li>
+</div>
+<div id="diskBtn" class="flip">网盘类网站 点击展开或收起</div>
+<div id="diskPanel"class="panel">
+<li hyperlink="https://pan.baidu.com"><img src="img/baiduwangpanicon.ico" width="20" height="20">百度网盘-免费云盘丨文件共享软件丨超大容量丨存储安全(不推荐使用）</li>
+<li hyperlink="https://www.aliyundrive.com/"><img src="img/aliyunpanicon.ico" width="20" height="20">阿里云盘 - 公测进行中·阿里巴巴集团出品</li>
+<li hyperlink="https://www.lanzou.com"><img src="img/lanzouyunicon.png" width="20" height="20">蓝奏·云存储</li>
+<li hyperlink="https://cowtransfer.com"><img src="img/nainiuyunicon.png" width="20" height="20">奶牛快传 | 免费大文件传输工具 上传下载不限速</li>
+</div>
+</body>
+</html>
